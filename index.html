@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link rel="stylesheet" type="text/css" href="./inc/css/common.css">
+<script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script>
+<style>
+* {padding:0;margin:0;}
+h1 {margin:20px 0 10px;font-size:30px;}
+.initTab .tabView,
+.initToggle > ul > li .toggleView {display:none;width:100px;height:100px;}
+.layerPopup {display:none;position:fixed;top:0;left:0;z-index:10;width:300px;height:300px;background:blue;}
+.dim {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:.6;filter:Alpha(opacity=60);}
+.initSwipeX {position:relative;overflow:hidden;width:200px;height:200px;}
+.initSwipeX .inner {white-space:nowrap;font-size:0;}
+.initSwipeX .swipeCon {display:inline-block;width:200px;height:200px;}
+.initSwipeX .paging {position:absolute;bottom:10px;width:100%;text-align:center;}
+.initSwipeX .paging span {display:inline-block;width:10px;height:10px;background:#eee;}
+.initSwipeX .paging .swiper-pagination-bullet-active {background:#000;}
+.initSwipeSlideX {overflow:hidden;width:100%;}
+.initSwipeSlideX .inner {white-space:nowrap;font-size:0;}
+.initSwipeSlideX .swipeCon {display:inline-block;margin-left:20px;font-size:15px;}
+.initSwipeSlideX .swipeCon:first-child {margin-left:0;}
+.initSwipeSlideY {overflow:hidden;width:100%;height:200px;border:1px solid #000;box-sizing:border-box;}
+</style>
+</head>
+<body>
+<!-- Tab -->
+<h1>Tab</h1>
+<div class="initTab">
+	<div class="tabCtrlWrap">
+		<button type="button" class="tabCtrl current">버튼1</button>
+		<button type="button" class="tabCtrl">버튼2</button>
+		<button type="button" class="tabCtrl">버튼3</button>
+	</div>
+
+	<div class="tabViewWrap">
+		<div class="tabView" style="background:red;"></div>
+		<div class="tabView" style="background:blue;"></div>
+		<div class="tabView" style="background:black;"></div>
+	</div>
+</div>
+
+<!-- Toggle -->
+<h1>Toggle</h1>
+<div class="initToggle">
+	<ul>
+		<li>
+			<button type="button" class="toggleCtrl current">토글1</button>
+			<div class="toggleView" style="background:red;"></div>
+		</li>
+		<li>
+			<button type="button" class="toggleCtrl">토글2</button>
+			<div class="toggleView" style="background:blue;"></div>
+		</li>
+		<li>
+			<button type="button" class="toggleCtrl">토글3</button>
+			<div class="toggleView" style="background:black;"></div>
+		</li>
+	</ul>
+</div>
+
+<!-- Layer Popup -->
+<h1>Layer Popup</h1>
+<button type="button" class="pubLayerCtrl">팝업 열기1</button>
+<div class="layerPopup pubLayerPopup">
+	<button type="button" class="btnLayerClose">닫기</button>
+</div>
+
+<button type="button" class="pubLayerCtrl">팝업 열기2</button>
+<div class="layerPopup pubLayerPopup">
+		<p>레이어팝업 테스트중입니다.</p>
+		<p>레이어팝업 테스트중입니다.1</p>
+		<p>레이어팝업 테스트중입니다.2</p>
+		<p>레이어팝업 테스트중입니다.3</p>
+		<p>레이어팝업 테스트중입니다.4</p>
+		<p>레이어팝업 테스트중입니다.5</p>
+	<button type="button" class="btnLayerClose">닫기</button>
+</div>
+
+<div class="layerPopup">
+		<p>레이어팝업 테스트중입니다.</p>
+		<p>레이어팝업 테스트중입니다.1</p>
+		<p>레이어팝업 테스트중입니다.2</p>
+		<p>레이어팝업 테스트중입니다.3</p>
+		<p>레이어팝업 테스트중입니다.4</p>
+		<p>레이어팝업 테스트중입니다.5</p>
+	<button type="button" class="btnLayerClose">닫기</button>
+</div>
+
+<div class="dim"></div>
+<script type="text/javascript" src="./inc/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./inc/js/ui.js"></script>
+</body>
+</html>
